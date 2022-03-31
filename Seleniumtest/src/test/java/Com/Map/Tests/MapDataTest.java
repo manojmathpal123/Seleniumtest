@@ -11,8 +11,7 @@ import Com.Map.BaseTest.TestBase;
 
 public class MapDataTest extends TestBase{
 	
-	String cityone = "San Francisco, California";
-	String citytwo = "Chico, California";
+
 
 	public MapDataTest() throws IOException 
 	{

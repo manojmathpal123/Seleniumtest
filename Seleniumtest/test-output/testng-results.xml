@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-31T15:08:23 IST" name="Suite" finished-at="2022-03-31T15:08:52 IST" duration-ms="28909">
+  <suite started-at="2022-03-31T16:25:52 IST" name="Suite" finished-at="2022-03-31T16:26:07 IST" duration-ms="15181">
     <groups>
     </groups>
-    <test started-at="2022-03-31T15:08:23 IST" name="Test" finished-at="2022-03-31T15:08:52 IST" duration-ms="28909">
+    <test started-at="2022-03-31T16:25:52 IST" name="Test" finished-at="2022-03-31T16:26:07 IST" duration-ms="15181">
       <class name="Com.Map.Tests.MapDataTest">
-        <test-method is-config="true" signature="startReport()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T15:08:23 IST" name="startReport" finished-at="2022-03-31T15:08:23 IST" duration-ms="662" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T16:25:52 IST" name="startReport" finished-at="2022-03-31T16:25:52 IST" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T15:08:23 IST" name="setup" finished-at="2022-03-31T15:08:38 IST" duration-ms="14509" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T16:25:52 IST" name="setup" finished-at="2022-03-31T16:26:00 IST" duration-ms="7541" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="MapPage()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T15:08:38 IST" name="MapPage" finished-at="2022-03-31T15:08:49 IST" duration-ms="11182" status="PASS">
+        <test-method signature="MapPage()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T16:26:00 IST" name="MapPage" finished-at="2022-03-31T16:26:06 IST" duration-ms="6005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MapPage -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T15:08:49 IST" name="getResult" finished-at="2022-03-31T15:08:51 IST" duration-ms="1546" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T16:26:06 IST" name="getResult" finished-at="2022-03-31T16:26:06 IST" duration-ms="327" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T15:08:51 IST" name="endReport" finished-at="2022-03-31T15:08:52 IST" duration-ms="897" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:Com.Map.Tests.MapDataTest@433d61fb]" started-at="2022-03-31T16:26:06 IST" name="endReport" finished-at="2022-03-31T16:26:07 IST" duration-ms="1091" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

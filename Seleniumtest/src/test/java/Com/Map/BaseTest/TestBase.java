@@ -1,5 +1,6 @@
 package Com.Map.BaseTest;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -35,10 +36,13 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public MapDataPage mapdatapage;
+	public String cityone = "San Francisco, California";
+	public String citytwo = "Chico, California";
 	
 	public HTMLReporter htmlreporter;
 	public ExtentReports extent;
 	public ExtentTest logger;
+	String screenShotName="";
 	
 	
 	@BeforeTest
@@ -140,8 +144,11 @@ public class TestBase {
 	}
 	
 	@AfterTest
-	public void endReport()
+	public void endReport() throws IOException
 	{
+		
+		File htmlFile = new File(System.getProperty("user.dir") +"/test-output/MAPReport.html");
+		Desktop.getDesktop().browse(htmlFile.toURI());
 		driver.close();
 	  extent.flush();
 	  //extent.close();
