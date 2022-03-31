@@ -70,7 +70,7 @@ public class TestBase {
 		try
 		{
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("/home/manoj/Pictures/Seleniumtest/src/test/java/Com/Map/Config/Config.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") +"/src/test/java/Com/Map/Config/Config.properties");
 		prop.load(fis);
 		}
 		catch (Exception e) {
