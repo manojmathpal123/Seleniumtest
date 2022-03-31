@@ -7,6 +7,9 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -101,22 +104,45 @@ public class TestBase {
 			
 		}
 	}
+	
+	public static String capture(WebDriver driver,String screenShotName) throws IOException
+    {
+        TakesScreenshot ts = (TakesScreenshot)driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String dest = System.getProperty("user.dir") +"/test-output/"+screenShotName+".png";
+        File destination = new File(dest);
+        FileUtils.copyFile(source, destination);        
+                     
+        return dest;
+    }
+	
 	@AfterMethod
-	public void getResult(ITestResult result)
+	public void getResult(ITestResult result) throws IOException
 	{
-		if(result.getStatus() == ITestResult.FAILURE){
-			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
-			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
+		if(result.getStatus() == ITestResult.SUCCESS){
+			logger.log(LogStatus.PASS, "Test Case passed is "+result.getName());
+			String screenShotPath = capture(driver, result.getName());	
+            logger.log(LogStatus.PASS, "Snapshot below: " + logger.addScreenCapture(screenShotPath));
+			
 			}
 		else if(result.getStatus() == ITestResult.SKIP){
 			logger.log(LogStatus.SKIP, "Test Case Skipped is "+result.getName());
 			}
+		else if(result.getStatus() == ITestResult.FAILURE){
+			
+			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getName());
+			logger.log(LogStatus.FAIL, "Test Case Failed is "+result.getThrowable());
+			}
+		
+		extent.endTest(logger);
+		
 		
 	}
 	
 	@AfterTest
 	public void endReport()
 	{
+		driver.close();
 	  extent.flush();
 	  //extent.close();
 	    }
